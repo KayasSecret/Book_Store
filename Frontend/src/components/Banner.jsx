@@ -1,10 +1,10 @@
 import React from 'react'
-import DashBoardImg from '../../public/DashboardImg.jpg'
+import DashboardImg from '../assets/DashboardImg.jpg'
 
 function Banner() {
   return (
     <>
-      <div className='max w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row'>
+      <div className='max w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10'>
         <div className=' w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-32'>
             <div className='space-y-12'>
                 <h1 className='text-4xl font-bold'>Hello everyone, Welcome to the my <span className='text-pink-500'>Book Store</span>.</h1>
@@ -26,8 +26,8 @@ function Banner() {
             </div>
             <button className="btn btn-secondary mt-6">Secondary</button>
         </div>
-        <div className='w-full md:w-1/2'>
-           <img src={DashBoardImg} className='order-1 md:order-2 w-120 h-120' alt="" />
+        <div className='w-full md:w-1/2 order-1 md:order-2'>
+           <img src={DashboardImg} className=' w-120 h-120' alt="Book" />
         </div>
       </div>
     </>
