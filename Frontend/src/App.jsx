@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Banner from "./components/Banner";
+import FreeBook from "./components/FreeBook";
+import Footer from "./components/Footer";
 import "./index.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
       <Navbar />
       <Banner />
+      <FreeBook />
       <Footer />
     </>
   );
