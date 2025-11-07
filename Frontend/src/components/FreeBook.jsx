@@ -2,6 +2,7 @@ import React from 'react'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Card from './Card';
 import Slider from "react-slick";
 
 import list from "../../public/list.json"
@@ -15,8 +16,8 @@ function FreeBook() {
         dots: true,
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         initialSlide: 0,
         responsive: [
             {
@@ -49,38 +50,19 @@ function FreeBook() {
   return ( 
     <>
         <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
-          <h1 className='font-semibold text-xl pb-2'>Free Offered Books</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, consequuntur?</p>
-        </div>
+            <div>
+                <h1 className='font-semibold text-xl pb-2'>Free Offered Books</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, consequuntur?</p>
+            </div>
 
-        {/* Listing Catds */}
-        <div>
-            <Slider {...settings}>
-                <div>
-                   <h3>1</h3>
-                </div>
-                <div>
-                   <h3>2</h3>
-                </div>
-                <div>
-                   <h3>3</h3>
-                </div>
-                <div>
-                   <h3>4</h3>
-                </div>
-                <div>
-                   <h3>5</h3>
-                </div>
-                <div>
-                   <h3>6</h3>
-                </div>
-                <div>
-                   <h3>7</h3>
-                </div>
-                <div>
-                   <h3>8</h3>
-                </div>
-           </Slider>
+            {/* Listing Catds */}
+            <div>
+                <Slider {...settings}>
+                   {filterData.map((item) => (
+                        <Card item={item} key={item.id}/>
+                   ))}
+                </Slider>
+            </div>
         </div>
     </>
   )
