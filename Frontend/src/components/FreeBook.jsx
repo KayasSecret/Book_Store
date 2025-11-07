@@ -5,10 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Card from './Card';
 import Slider from "react-slick";
 
-import list from "../../public/list.json"
+import list from "../../public/list.json";
 
 function FreeBook() {
-    const filterData = list.filter((data) => data.category === "free");
+   const filterData = list.filter((data) => data.category.toLowerCase() === "free");
     console.log(filterData);
     
     {/* Slick Slider */}
