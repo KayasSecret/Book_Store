@@ -57,7 +57,7 @@ function FreeBook() {
 
             {/* Listing Catds */}
             <div>
-                <Slider {...settings}>
+                <Slider {...settings} >
                    {filterData.map((item) => (
                         <Card item={item} key={item.id}/>
                    ))}
