@@ -9,7 +9,7 @@ import list from "../../public/list.json";
 
 function FreeBook() {
    const filterData = list.filter((data) => data.category.toLowerCase() === "free");
-    console.log(filterData);
+   console.log(filterData);
     
     {/* Slick Slider */}
     var settings = {

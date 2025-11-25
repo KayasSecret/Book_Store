@@ -8,13 +8,13 @@ function Card({ item }) {
            <div className="card bg-base-100 w-full max-w-sm shadow-sm mx-auto">
                 <figure>
                     <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    src={item.image}
                     alt="Shoes" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
-                    {item?.name}
-                    <div className="badge badge-secondary">NEW</div>
+                    {item.name}
+                    <div className="badge badge-secondary">{item.category}</div>
                     </h2>
                     <p>{item?.title}</p>
                     <div className="card-actions justify-end">
