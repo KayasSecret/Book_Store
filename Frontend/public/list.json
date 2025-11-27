@@ -62,7 +62,7 @@
     },
      {
         "id": 8,
-        "name": "The Crystal Feather Chronicles",
+        "name": "The Crystal",
         "title": "This book based on hindu mythology.",
         "price": 0,
         "category": "Free",
@@ -70,7 +70,7 @@
     },
      {
         "id": 9,
-        "name": "DNeon Skies and Metal Hearts",
+        "name": "DNeon Skies",
         "title": "This book based on hindu mythology.",
         "price": 0,
         "category": "Free",
@@ -78,7 +78,7 @@
     },
      {
         "id": 10,
-        "name": "Letters from the Sunset Shore",
+        "name": "Letters from space",
         "title": "This book based on hindu mythology.",
         "price": 0,
         "category": "Free",
