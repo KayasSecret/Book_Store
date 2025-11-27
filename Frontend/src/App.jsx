@@ -1,19 +1,19 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
-import FreeBook from "./components/FreeBook";
-import Card from "./components/Card";
-import Footer from "./components/Footer";
+import Home from "./home/Home";
+import Course from "./components/Course";
+import { Route, Routes } from "react-router-dom";
 import "./index.css";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Banner />
-      <FreeBook />
-      {/* <Card /> */}
-      <Footer />
+      {/* <Home />
+      <Course /> */}
+
+      <Routes>
+        <Route path="/" element={ <Home /> }/>
+        <Route path="/course" element={ <Course /> }/>
+      </Routes>
     </>
   );
 }

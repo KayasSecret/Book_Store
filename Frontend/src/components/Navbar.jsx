@@ -18,16 +18,8 @@ function App() {
 
   const navItem = (
     <>
-      <li><a>Home</a></li>
-      <li>
-        <details>
-          <summary>Courses</summary>
-          <ul className="p-2">
-            <li><a>Delta 2.0</a></li>
-            <li><a>Sigma</a></li>
-          </ul>
-        </details>
-      </li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/course">Course</a></li>
       <li><a>About</a></li>
       <li><a>Contact</a></li>
     </>
