@@ -1,6 +1,23 @@
 import { useEffect, useState } from "react";
 
 function App() {
+  // This one is for mode (dark , light)
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
+  const element = document.documentElement;
+  useEffect(() => {
+    if(theme === "dark") {
+      element.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      document.body.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      document.body.classList.remove("dark");
+    }
+  },[theme])
+
+
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -27,13 +44,15 @@ function App() {
 
   return (
     <>
-    <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50
-                     ${
-                       sticky ? "sticky-navbar shadow-mg bg-base-200 duration-300 transition-all ease-in-out"
-                       : ""
+    <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4
+                    dark:bg-slate-900 dark:text-white fixed top-0 left-0 right-0 z-50
+                    ${
+                      sticky
+                        ? "sticky-navbar shadow-md bg-slate-900 dark:bg-slate-700 duration-300 transition-all ease-in-out"
+                        : ""
                       }`
                     }>
-      <div className="navbar">
+      <div className="navbar border-none">
         {/* Left Section */}
         <div className="navbar-start">
           <div className="dropdown">
@@ -96,13 +115,16 @@ function App() {
           </div>
 
           {/* Theme Controler */}
-          <label className="toggle text-base-content">
-            <input type="checkbox" value="synthwave" className="theme-controller" />
+          <label className="flex items-center gap-2 cursor-pointer">
 
-            <svg 
-             aria-label="sun" 
-             xmlns="http://www.w3.org/2000/svg" 
-             viewBox="0 0 24 24">
+            {/*Sun Icon*/}
+            <svg
+              aria-label="sun"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6 cursor-pointer hover:scale-110 duration-200"
+              onClick={() => setTheme("light")}
+            >
             <g 
              strokeLinejoin="round" 
              strokeLinecap="round" 
@@ -121,10 +143,14 @@ function App() {
             </g>
             </svg>
 
-            <svg 
-             aria-label="moon" 
-             xmlns="http://www.w3.org/2000/svg" 
-             viewBox="0 0 24 24">
+            {/*Moon Icon*/}
+            <svg
+                aria-label="moon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="w-6 h-6 cursor-pointer hover:scale-110 duration-200"
+                onClick={() => setTheme("dark")}
+              >
               <g 
                strokeLinejoin="round" 
                strokeLinecap="round" 
