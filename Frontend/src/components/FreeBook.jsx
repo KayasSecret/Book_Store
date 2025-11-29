@@ -58,9 +58,11 @@ function FreeBook() {
             {/* Listing Catds */}
             <div>
                 <Slider {...settings} >
-                   {filterData.map((item) => (
-                        <Card item={item} key={item.id}/>
-                   ))}
+                    {filterData.map((item) => (
+                            <div key={item.id} className="px-4 scale-90"> 
+                                <Card item={item} />
+                            </div>
+                    ))}
                 </Slider>
             </div>
         </div>

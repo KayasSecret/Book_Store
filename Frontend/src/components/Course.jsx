@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import list from '../../public/list.json';
+import { Link } from 'react-router-dom';
 
 function Course() {
   return (
@@ -14,7 +15,9 @@ function Course() {
           </h1>
           <p className='mt-12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam non quos temporibus molestias suscipit corporis! Ipsum vero perferendis quisquam iure velit quidem, vel possimus, quod error ducimus omnis quasi sit hic. Vero eos magni perspiciatis, aliquam ipsam ullam deleniti consequatur quasi, dicta explicabo animi iure! Qui itaque alias laboriosam nulla aut ab atque architecto saepe ipsam sapiente! Sequi, velit.
           </p>
-          <button className='mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300'>Back</button>
+          <Link to="/">
+            <button className='mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300 cursor-pointer'>Back</button>
+          </Link>
         </div>
 
         {/*Cards*/}
