@@ -7,10 +7,12 @@ import "./index.css";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={ <Home /> }/>
-        <Route path="/course" element={ <Courses /> }/>
-      </Routes>
+      <div className="">
+        <Routes>
+          <Route path="/" element={ <Home /> }/>
+          <Route path="/course" element={ <Courses /> }/>
+        </Routes>
+      </div>
     </>
   );
 }
