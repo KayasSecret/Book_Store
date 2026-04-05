@@ -39,9 +39,7 @@ This project demonstrates a complete end-to-end web system including:
 - ⚡ Express.js  
 
 ## 🗄️ Database
-- 🍃 MongoDB  
-- 🧩 Mongoose ODM  
-
+- 🍃 MongoDB
 ---
 
 # ✨ Key Features  
